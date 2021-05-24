@@ -24,6 +24,9 @@ public class TreeUse {
 //		        / \ 
 //		       7   8
 		
+		int numOfNodes = numNodes(root);
+		System.out.println(numOfNodes);
+		
 	}
 	
 	public static int numNodes(TreeNode<Integer> root) {
