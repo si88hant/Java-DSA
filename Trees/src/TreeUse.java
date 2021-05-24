@@ -25,5 +25,17 @@ public class TreeUse {
 //		       7   8
 		
 	}
+	
+	public static int numNodes(TreeNode<Integer> root) {
+		if(root==null) {
+			return 0;
+		}
+		
+		int count = 1;
+		for(int i=0; i<root.children.size(); i++) {
+			count = count + numNodes(root.children.get(i));
+		}
+		return count;
+	}
 
 }
