@@ -12,7 +12,7 @@ public class BinaryTreeUse {
 		
 //		      5
 //		     / \
-//         10   15
+//                 10   15
 		 
 		
 		int numOfNodes = countNodes(root);
