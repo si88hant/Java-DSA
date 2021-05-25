@@ -14,6 +14,23 @@ public class BinaryTreeUse {
 //		     / \
 //         10   15
 		 
+		
+		int numOfNodes = countNodes(root);
+		System.out.println(numOfNodes);
 	}
-
+	
+	public static int countNodes(BinaryTreeNode<Integer> root) {
+		
+		if(root==null) {
+			return 0;
+		}
+		
+		int totalNodes = 1;
+		
+		totalNodes = totalNodes + countNodes(root.left);
+		totalNodes = totalNodes + countNodes(root.right);
+		
+		return totalNodes;
+		
+	}
 }
