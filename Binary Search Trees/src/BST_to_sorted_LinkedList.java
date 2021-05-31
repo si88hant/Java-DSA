@@ -14,8 +14,8 @@ public class BST_to_sorted_LinkedList {
 
 		/*
 		 
-		 My Solution : Throwing null pointer exception --> because you didn't consider other cases
-		 
+		 My Solution : Throwing null pointer exception --> because you didn't consider other cases. You WERE thinking correctly
+		               
         if(root == null){
             return null;
         }
