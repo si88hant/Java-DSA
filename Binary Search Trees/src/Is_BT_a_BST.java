@@ -7,7 +7,7 @@ public class Is_BT_a_BST {
 	 an ArrayList. If you get a sorted array then the BT 
 	 is a BST */
 	
- //  2. compare leftMax with root and rightMin with Node
+ //  2. compare leftMax with root and rightMin with root
 	
 	public static boolean isBST(BinaryTreeNode<Integer> root) {
     
