@@ -3,22 +3,24 @@ public class sort012 {
 	public static void main(String[] args) {
 		int arr[] = {1,0,2,1,0,1,0,1,0,2,0,2,0,1,0,2,0,2,1,1,0,1,1};
 		
-		int i = 0;
-		int j = arr.length-1;
+		int start = 0;
+		int end = arr.length-1;
+		int i=0;
 		
-  		while(i<=j) {
+  		while(i<=end && start<end) {
 			if(arr[i] == 0) {
+				arr[i] = arr[start];
+				arr[start] = 0;
+				start++;
 				i++;
 			}
-			if(arr[j] == 2) {
-				j--;
+			else if(arr[i] == 2) {
+				arr[i] = arr[end];
+				arr[end] = 2;
+				end--;
 			}
-			if(arr[i] == 2 && arr[j] == 0) {
-				int temp = arr[i];
-				arr[i] = arr[j];
-				arr[j] = temp;
+			else {
 				i++;
-				j--;
 			}
 		}
 		
