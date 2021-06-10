@@ -16,8 +16,9 @@ public class rotate_array_by_k {
 	public static void rotate(int[] arr, int k) {
 		
 		k = k % arr.length;
+		
 		if(k < 0) {
-			k = k + arr.length;
+			k = k + arr.length;      //k = -1 will be same as for k = 6
 		}
 		
 		//part 1
