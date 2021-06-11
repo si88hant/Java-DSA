@@ -27,6 +27,9 @@ public class rotate_array_by_k {
 		//part 2
 		reverse(arr, arr.length-k, arr.length-1);
 		
+		//all
+		reverse(arr, 0, arr.length-1);
+		
 		
 	}
 	
