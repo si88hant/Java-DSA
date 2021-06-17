@@ -3,6 +3,7 @@ package Easy;
 public class Pairwise_swap_elements {
 
     public Node pairwiseSwap(Node head)
+    
     {
         // DID IT ON MY OWN. NO HINTS SEEN. TOOK ME 43 MINUTES
         
