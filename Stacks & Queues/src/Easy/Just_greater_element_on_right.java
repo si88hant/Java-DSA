@@ -34,7 +34,7 @@ public static void next_greater(int arr[] , int n) {
 		}
 		
 		for(int i=0; i<n; i++) {
-			System.out.print(arr1[i] + " ");
+			System.out.println(arr[i] + " ---> " + arr1[i]);
 		}
 	}
 }
