@@ -21,6 +21,10 @@ public static void next_greater(int arr[] , int n) {
 		int arr1[] = new int[n];
 		
 		for(int i = n-1 ; i>=0; i--) {
+			
+			//checking if the current value is greater than the 
+			//value at the top of the stack. If it is, then we 
+			//remove it from the stack.
 			while(!s.isEmpty() && (s.peek() <= arr[i])) {
 				s.pop();
 			}
