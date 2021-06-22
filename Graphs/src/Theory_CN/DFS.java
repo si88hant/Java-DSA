@@ -2,7 +2,7 @@ package Theory_CN;
 
 import java.util.Scanner;
 
-public class Graph {
+public class DFS {
 
 	public static void main(String[] args) {
 		int n;
