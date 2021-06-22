@@ -32,7 +32,7 @@ public class Queue_using_2_stacks {
 	   
 	   
 	   //else{
-            return s2.pop();  //if s2 is not empty then pop from s2
+            return s2.pop();  //if s2 is not empty then pop()
 	   //}
         
     }	
