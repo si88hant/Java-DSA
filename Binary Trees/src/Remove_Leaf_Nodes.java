@@ -14,6 +14,7 @@ public class Remove_Leaf_Nodes {
 		BinaryTreeNode<Integer> updated_left = removeAllLeaves(root.left);
 		BinaryTreeNode<Integer> updated_right = removeAllLeaves(root.right);
 		
+		//now connecting the updated left and updated right subtrees with the root
 		root.left = updated_left;
 		root.right = updated_right;
 		
