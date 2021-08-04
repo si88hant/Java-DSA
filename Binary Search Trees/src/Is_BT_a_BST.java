@@ -1,57 +1,33 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Is_BT_a_BST {
 
-	
-	
-  /* 1. Do inorder traversal and store all values in 
-	 an ArrayList. If you get a sorted array then the BT 
-	 is a BST */
-	
- //  2. compare leftMax with root and rightMin with root
-	
-	public static boolean isBST(BinaryTreeNode<Integer> root) {
+    static ArrayList<Integer> al = new ArrayList<>();
     
+	public static boolean isBST(BinaryTreeNode<Integer> root) {
+
         if(root == null){
             return true;
         }
         
-        int leftMax = maximum(root.left);
-        int rightMin = minimum(root.right);
+        inorder(root);
         
-        if(root.data <= leftMax){
-            return false;
+        for(int i=0; i<al.size()-1; i++) {
+        	if(al.get(i) > al.get(i+1)) {
+        		return false;
+        	}
         }
-        if(root.data > rightMin){
-            return false;
-        }
-        
-        boolean isLeftBST = isBST(root.left);
-        boolean isRightBST = isBST(root.right);
-        
-        if(isLeftBST && isRightBST){
-            return true;
-        }else{
-            return false;
-        }
+        return true;
 	}
     
-    public static int maximum(BinaryTreeNode<Integer> root){
-        
+    public static void inorder(BinaryTreeNode<Integer> root){
         if(root == null){
-            return Integer.MIN_VALUE;
+            return;
         }
-        
-        return Math.max(root.data , Math.max(maximum(root.left) , maximum(root.right)));
+        inorder(root.left);
+        al.add(root.data);
+        inorder(root.right);
     }
-    
-    public static int minimum(BinaryTreeNode<Integer> root){
-        
-        if(root == null){
-            return Integer.MAX_VALUE;
-        }
-        
-        return Math.min(root.data , Math.max(minimum(root.left) , minimum(root.right)));
-    }
-	
-	
+
 }
