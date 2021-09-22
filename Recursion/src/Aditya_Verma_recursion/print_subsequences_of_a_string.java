@@ -13,7 +13,7 @@ public class print_subsequences_of_a_string {
 		solve(input, output);
 	}
 
-	public static void solve(String ip, String op) {
+	public static void solve(String ip, String op) { 
 		
 		if(ip.length() == 0) {
 			System.out.print(op + " ");
@@ -23,7 +23,7 @@ public class print_subsequences_of_a_string {
 		String op1 = op;
 		String op2 = op;
 		
-		op1 += ip.charAt(0);
+		op2 += ip.charAt(0);
 		ip = ip.substring(1);
 		
 		solve(ip, op1);
